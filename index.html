@@ -6,7 +6,6 @@
   <title>خلاقیت دیجیتال | طراحی گرافیک حرفه‌ای</title>
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;800;900&display=swap" rel="stylesheet">
   
-  <!-- استایل‌ها مستقیما اینجا قرار گرفتند تا مشکل حل شود -->
   <style>
     * {
       margin: 0;
@@ -213,38 +212,31 @@
     }
 
     .work {
-      height: 220px;
       border-radius: 15px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 24px;
-      font-weight: 800;
-      color: var(--white);
-      transition: all 0.4s ease;
-      cursor: pointer;
-      background-color: var(--navy-light);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      position: relative;
       overflow: hidden;
+      position: relative;
+      cursor: pointer;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      transition: all 0.4s ease;
     }
 
-    .work::after {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; width: 100%; height: 100%;
-      background: linear-gradient(45deg, transparent, rgba(230, 57, 70, 0.2), transparent);
-      transform: translateX(-100%);
-      transition: transform 0.6s ease;
+    .work img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
     }
 
     .work:hover {
-      transform: scale(1.03);
       border-color: var(--red);
+      box-shadow: 0 15px 40px rgba(230, 57, 70, 0.2);
+      transform: translateY(-5px);
     }
 
-    .work:hover::after {
-      transform: translateX(100%);
+    .work:hover img {
+      transform: scale(1.1);
     }
 
     .contact {
@@ -354,12 +346,24 @@
   <section id="portfolio" class="portfolio">
     <h2>نمونه‌کارها</h2>
     <div class="grid">
-      <div class="work">پروژه ۱</div>
-      <div class="work">پروژه ۲</div>
-      <div class="work">پروژه ۳</div>
-      <div class="work">پروژه ۴</div>
-      <div class="work">پروژه ۵</div>
-      <div class="work">پروژه ۶</div>
+      <div class="work">
+        <img src="work1.jpg" alt="نمونه کار ۱">
+      </div>
+      <div class="work">
+        <img src="work2.jpg" alt="نمونه کار ۲">
+      </div>
+      <div class="work">
+        <img src="work3.jpg" alt="نمونه کار ۳">
+      </div>
+      <div class="work">
+        <img src="work4.jpg" alt="نمونه کار ۴">
+      </div>
+      <div class="work">
+        <img src="work5.jpg" alt="نمونه کار ۵">
+      </div>
+      <div class="work">
+        <img src="work6.jpg" alt="نمونه کار ۶">
+      </div>
     </div>
   </section>
 
